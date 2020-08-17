@@ -1,4 +1,4 @@
-[![NarothamSai>](https://circleci.com/gh/<NarothamSai>/<project-ml-microservice-kubernetes>.svg?style=svg)](LINK)
+[![CircleCI>](https://circleci.com/gh/<NarothamSai>/<project-ml-microservice-kubernetes>.svg?style=shield)](https://circleci.com/gh/<NarothamSai>/<project-ml-microservice-kubernetes)
 
 ## Project Overview
 
