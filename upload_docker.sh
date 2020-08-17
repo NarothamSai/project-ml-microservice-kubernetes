@@ -6,10 +6,13 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
+dockerpath=narothamsai/house_prediction
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker tag house_prediction $dockerpath
 
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath
