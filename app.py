@@ -10,7 +10,7 @@ app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
 
-LOG.info(f'Started APP')
+LOG.info('Started APP')
 
 
 def scale(payload):
@@ -24,7 +24,7 @@ def scale(payload):
 
 @app.route("/")
 def home():
-    html = f"<h3>Sklearn Prediction Home</h3>"
+    html = "<h3>Sklearn Prediction Home</h3>"
     return html.format(format)
 
 
