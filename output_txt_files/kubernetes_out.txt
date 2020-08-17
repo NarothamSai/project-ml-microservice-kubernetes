@@ -1,1 +1,33 @@
-<paste log output from Kubernetes-mediated prediction, here>
+deployment.apps/house-prediction created
+NAME                                READY   STATUS    RESTARTS   AGE
+house-prediction-5f585ddb57-gh256   0/1     Pending   0          0s
+Waiting for deployment "house-prediction" rollout to finish: 0 of 1 updated replicas are available...
+deployment "house-prediction" successfully rolled out
+NAME                                READY   STATUS    RESTARTS   AGE
+house-prediction-5f585ddb57-gh256   1/1     Running   0          11s
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
+
+
+[2020-08-17 13:31:13,427] INFO in app: Started APP
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+[2020-08-17 13:31:14,292] INFO in app: Started APP
+ * Debugger is active!
+ * Debugger PIN: 672-614-907
+127.0.0.1 - - [17/Aug/2020 13:31:34] "GET / HTTP/1.1" 200 -
+[2020-08-17 13:31:59,569] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-08-17 13:31:59,588] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-08-17 13:31:59,599] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-08-17 13:31:59,602] INFO in app: prediction: [20.35373177134412]
+127.0.0.1 - - [17/Aug/2020 13:31:59] "POST /predict HTTP/1.1" 200 -
